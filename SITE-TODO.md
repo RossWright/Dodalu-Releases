@@ -18,12 +18,11 @@ before calling the marketing page “done.”
 
 ## Should do
 
-4. **Custom domain DNS** — point `dodalu.com` (and ideally `www`) at GitHub Pages;
-   confirm HTTPS after the `CNAME` file is live.
+4. ~~**Custom domain DNS**~~ — `dodalu.com` / `www` on GitHub Pages (HTTPS enforced).
 5. **Favicon set** — add `favicon.ico` + Apple touch icon from `art/logo.png`
    / `new_icon.png` (multiple sizes).
-6. **Download button accuracy** — after first `publish.bat`, confirm
-   `site.js` resolves the Setup.exe name; adjust feed `index.html` if needed.
+6. ~~**Download button accuracy**~~ — `site.js` resolves Setup / AppImage / `.deb`
+   from `/feed/index.html`.
 7. **Privacy / contact** — only if you care before launch (footer link).
 8. **Optional second screenshot** — Agents flyout / MCP registration for the
    “Agents stay outside” section (replace the mascot panel or sit beside it).
@@ -31,14 +30,14 @@ before calling the marketing page “done.”
 ## Nice later
 
 9. Short looped demo (silent WebM/MP4) of moving a card + opening a doc.
-10. ~~Linux download row when AppImage packs exist~~ — `tools/publish-feed.sh` lists Setup / AppImage / `.deb` in `/feed/index.html`.
+10. ~~Linux download row~~ — homepage + `/feed/` list Windows Setup, AppImage, `.deb`.
 11. License / pricing blurb once Lemon (or similar) is live.
 12. Self-host fonts if you want zero Google Fonts dependency.
+13. Snap Store listing (classic snap packs locally via `pack-snap.sh`).
 
 ## Publish checklist
 
-- [ ] Enable Pages: branch `main`, folder `/`
-- [ ] Push this site (homepage + assets)
-- [ ] Run `publish.bat <version>` from private Dodalu repo
-- [ ] Commit/push feed artifacts
-- [ ] Attach custom domain in repo Settings → Pages
+- [x] Enable Pages: branch `main`, folder `/`
+- [x] Push this site (homepage + assets)
+- [x] Tag-driven beta CI publishes `/feed/`
+- [x] Attach custom domain in repo Settings → Pages

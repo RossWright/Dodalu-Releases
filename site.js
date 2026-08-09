@@ -23,21 +23,33 @@
     reveals.forEach((el) => observer.observe(el));
   }
 
-  // Prefer a concrete Setup.exe when the feed has been published.
-  const download = document.getElementById("download-setup");
-  if (!download) {
+  // Prefer concrete package hrefs when the feed index has been published.
+  const targets = [
+    { id: "download-setup", pattern: /href="([^"]*Setup\.exe)"/i },
+    { id: "download-appimage", pattern: /href="([^"]*\.AppImage)"/i },
+    { id: "download-deb", pattern: /href="([^"]*\.deb)"/i },
+  ];
+
+  if (!targets.some((t) => document.getElementById(t.id))) {
     return;
   }
 
-  fetch("feed/")
+  const feedBase = new URL("feed/", window.location.href);
+  fetch(feedBase.href)
     .then((response) => (response.ok ? response.text() : Promise.reject()))
     .then((html) => {
-      const match = html.match(/href="([^"]*Setup\.exe)"/i);
-      if (match?.[1]) {
-        download.setAttribute("href", new URL(match[1], new URL("feed/", window.location.href)).href);
+      for (const target of targets) {
+        const el = document.getElementById(target.id);
+        if (!el) {
+          continue;
+        }
+        const match = html.match(target.pattern);
+        if (match?.[1]) {
+          el.setAttribute("href", new URL(match[1], feedBase).href);
+        }
       }
     })
     .catch(() => {
-      // Keep the /feed/ fallback until the first pack is published.
+      // Keep the /feed/ fallback until packages are published.
     });
 })();

@@ -51,7 +51,7 @@
           local JSON, details in Markdown, no cloud kanban account required.
         </p>
         <div class="hero-actions">
-          <a class="btn primary" href="#download">Download for Windows</a>
+          <a class="btn primary" href="#download">Download</a>
           <a class="btn quiet" href="#how">See how it works</a>
         </div>
       </div>
@@ -75,9 +75,9 @@
       <div class="band-inner reveal">
         <h2 id="how-title">Open a folder. Get a board.</h2>
         <p class="band-support">
-          Dodalu creates a private <code>.dodalu/</code> workspace beside your
-          project. The board is inspectable JSON; card write-ups stay normal
-          Markdown files in the tree.
+          Dodalu keeps board content in <code>dodalu.json</code> at the project
+          root, with Markdown card docs in the tree. Appearance stays on this
+          machine — open any folder and get a board.
         </p>
       </div>
     </section>
@@ -140,17 +140,24 @@
       <div class="download-inner reveal">
         <h2 id="download-title">Get Dodalu</h2>
         <p>
-          Windows installer via Velopack. Updates can check on launch from this
-          same site.
+          Windows Setup and Linux AppImage / <code>.deb</code> via Velopack.
+          Installed builds can check for updates from this site.
         </p>
         <div class="download-actions">
           <a class="btn primary large" id="download-setup" href="feed/">
-            Download Windows Setup
+            Windows Setup
+          </a>
+          <a class="btn quiet large" id="download-appimage" href="feed/">
+            Linux AppImage
+          </a>
+          <a class="btn quiet large" id="download-deb" href="feed/">
+            Linux .deb
           </a>
           <a class="btn quiet" href="feed/">Browse release files</a>
         </div>
         <p class="fineprint">
-          macOS not available yet · Linux packaging is on the roadmap ·
+          Beta channel packages are on the feed now · macOS not available yet ·
+          Snap remains local/manual for now ·
           <a href="https://github.com/RossWright/Dodalu-Releases">GitHub</a>
         </p>
       </div>
