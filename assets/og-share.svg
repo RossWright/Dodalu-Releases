@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8eef1"/>
+      <stop offset="45%" stop-color="#f3f1ea"/>
+      <stop offset="100%" stop-color="#b9cfc4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="980" cy="80" r="220" fill="#e7c07a" fill-opacity="0.35"/>
+  <circle cx="120" cy="560" r="260" fill="#1f6f6a" fill-opacity="0.2"/>
+  <text x="80" y="250" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="96" font-weight="800" letter-spacing="-3">Dodalu</text>
+  <text x="80" y="330" fill="#3d4f55" font-family="Georgia, serif" font-size="36">Kanban that lives next to the code.</text>
+  <text x="80" y="520" fill="#5f7278" font-family="Segoe UI, sans-serif" font-size="24">PLACEHOLDER  export assets/og-share.png at 1200�630</text>
+</svg>

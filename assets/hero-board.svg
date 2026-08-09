@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-label="Placeholder Dodalu board">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#24363b"/>
+      <stop offset="55%" stop-color="#1a2c30"/>
+      <stop offset="100%" stop-color="#14524e"/>
+    </linearGradient>
+    <linearGradient id="col" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7f4ec"/>
+      <stop offset="100%" stop-color="#e7efe9"/>
+    </linearGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="800" fill="url(#bg)"/>
+  <circle cx="1080" cy="-40" r="280" fill="#e7c07a" fill-opacity="0.12"/>
+  <circle cx="180" cy="860" r="320" fill="#1f6f6a" fill-opacity="0.35"/>
+
+  <!-- title bar -->
+  <rect x="36" y="28" width="1208" height="52" rx="12" fill="#0f1c20" fill-opacity="0.55"/>
+  <circle cx="64" cy="54" r="10" fill="#e7c07a"/>
+  <text x="88" y="60" fill="#eef6f4" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700">Dodalu  sample project</text>
+  <text x="1120" y="60" fill="#9eb5b1" font-family="Segoe UI, sans-serif" font-size="14">PLACEHOLDER</text>
+
+  <!-- columns -->
+  <g filter="url(#soft)">
+    <g transform="translate(56,120)">
+      <rect width="280" height="620" rx="16" fill="url(#col)"/>
+      <rect width="280" height="10" rx="5" fill="#5b8fd9"/>
+      <text x="22" y="46" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Backlog</text>
+      <rect x="18" y="72" width="244" height="88" rx="10" fill="#fff" stroke="#d5ddd8"/>
+      <text x="34" y="108" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="16" font-weight="600">Sketch board wallpaper</text>
+      <text x="34" y="132" fill="#5f7278" font-family="Segoe UI, sans-serif" font-size="13">Docs live as Markdown</text>
+      <rect x="18" y="176" width="244" height="88" rx="10" fill="#fff" stroke="#d5ddd8"/>
+      <text x="34" y="212" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="16" font-weight="600">Tag filter polish</text>
+      <rect x="34" y="228" width="54" height="18" rx="4" fill="#c9e2d8"/>
+    </g>
+
+    <g transform="translate(360,120)">
+      <rect width="280" height="620" rx="16" fill="url(#col)"/>
+      <rect width="280" height="10" rx="5" fill="#1f6f6a"/>
+      <text x="22" y="46" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Doing</text>
+      <rect x="18" y="72" width="244" height="110" rx="10" fill="#fff" stroke="#d5ddd8"/>
+      <text x="34" y="108" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="16" font-weight="600">Ship public site</text>
+      <text x="34" y="132" fill="#5f7278" font-family="Segoe UI, sans-serif" font-size="13">GitHub Pages + Velopack feed</text>
+      <rect x="34" y="148" width="70" height="18" rx="4" fill="#e7c07a"/>
+      <rect x="18" y="200" width="244" height="88" rx="10" fill="#fff" stroke="#d5ddd8"/>
+      <text x="34" y="236" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="16" font-weight="600">Signed license keys</text>
+    </g>
+
+    <g transform="translate(664,120)">
+      <rect width="280" height="620" rx="16" fill="url(#col)"/>
+      <rect width="280" height="10" rx="5" fill="#c47b4a"/>
+      <text x="22" y="46" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Review</text>
+      <rect x="18" y="72" width="244" height="88" rx="10" fill="#fff" stroke="#d5ddd8"/>
+      <text x="34" y="108" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="16" font-weight="600">Jump list open path</text>
+      <text x="34" y="132" fill="#5f7278" font-family="Segoe UI, sans-serif" font-size="13">Recent projects as Tasks</text>
+    </g>
+
+    <g transform="translate(968,120)">
+      <rect width="256" height="620" rx="16" fill="url(#col)"/>
+      <rect width="256" height="10" rx="5" fill="#6b7280"/>
+      <text x="22" y="46" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="20" font-weight="700">Done</text>
+      <rect x="18" y="72" width="220" height="72" rx="10" fill="#fff" stroke="#d5ddd8"/>
+      <text x="34" y="114" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="15" font-weight="600">Rename to Dodalu</text>
+      <rect x="18" y="160" width="220" height="72" rx="10" fill="#fff" stroke="#d5ddd8"/>
+      <text x="34" y="202" fill="#1c2a2e" font-family="Segoe UI, sans-serif" font-size="15" font-weight="600">Velopack pack script</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dodalu — Desktop kanban next to your code</title>
+  <meta
+    name="description"
+    content="Dodalu is a desktop kanban board for work that lives beside a real source tree. Local JSON board state, Markdown card docs, optional MCP for external agents."
+  />
+  <meta property="og:title" content="Dodalu" />
+  <meta
+    property="og:description"
+    content="Desktop kanban next to your code. Local boards. Markdown cards. Agents stay outside."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dodalu.com/" />
+  <meta property="og:image" content="https://dodalu.com/assets/og-share.png" />
+  <meta name="theme-color" content="#1c2a2e" />
+  <link rel="icon" href="assets/icon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:opsz,ital,wght@8..60,0,400;8..60,0,600;8..60,1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="brand-mark" href="#top" aria-label="Dodalu home">
+      <img src="assets/logo.png" width="36" height="36" alt="" />
+      <span>Dodalu</span>
+    </a>
+    <nav class="top-nav" aria-label="Primary">
+      <a href="#how">How it works</a>
+      <a href="#mcp">Agents</a>
+      <a class="nav-download" href="#download">Download</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-brand">
+      <div class="hero-copy reveal">
+        <p class="hero-brand" id="hero-brand">Dodalu</p>
+        <h1 class="hero-line">Kanban that lives next to the code.</h1>
+        <p class="hero-support">
+          A desktop board for folders you already have — columns and cards in
+          local JSON, details in Markdown, no cloud kanban account required.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#download">Download for Windows</a>
+          <a class="btn quiet" href="#how">See how it works</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal reveal-delay" aria-label="Product preview">
+        <!-- TODO: replace with a real board screenshot (assets/hero-board.png) -->
+        <div class="hero-frame">
+          <img
+            class="hero-shot"
+            src="assets/hero-board.svg"
+            width="1280"
+            height="800"
+            alt="Placeholder preview of a Dodalu kanban board"
+          />
+          <p class="placeholder-note">Placeholder board art — swap for a real screenshot</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="how" aria-labelledby="how-title">
+      <div class="band-inner reveal">
+        <h2 id="how-title">Open a folder. Get a board.</h2>
+        <p class="band-support">
+          Dodalu creates a private <code>.dodalu/</code> workspace beside your
+          project. The board is inspectable JSON; card write-ups stay normal
+          Markdown files in the tree.
+        </p>
+      </div>
+    </section>
+
+    <section class="steps" aria-label="How Dodalu fits a project">
+      <article class="step reveal">
+        <span class="step-index">01</span>
+        <h3>Shape the board</h3>
+        <p>
+          Columns, colors, wallpaper, and tags — tuned for the project in front
+          of you, not a hosted workspace template.
+        </p>
+      </article>
+      <article class="step reveal reveal-delay">
+        <span class="step-index">02</span>
+        <h3>Write beside the cards</h3>
+        <p>
+          Open a card’s Markdown in the docs pane: preview by default, source
+          when you need it, or jump to your external editor.
+        </p>
+      </article>
+      <article class="step reveal reveal-delay-2">
+        <span class="step-index">03</span>
+        <h3>Keep git out of the way</h3>
+        <p>
+          Live board state stays git-ignored. Durable notes commit with the
+          project like any other doc.
+        </p>
+      </article>
+    </section>
+
+    <section class="split" id="mcp" aria-labelledby="mcp-title">
+      <div class="split-copy reveal">
+        <h2 id="mcp-title">Agents stay outside the app.</h2>
+        <p>
+          Dodalu is not a chat host. An optional MCP server exposes board tools
+          to clients you already use — Cursor, Codex, Copilot, Claude Desktop —
+          while the desktop UI stays a calm place to move work by hand.
+        </p>
+      </div>
+      <div class="split-visual reveal reveal-delay">
+        <!-- TODO: replace with a short MCP / Agents flyout screenshot -->
+        <div class="quote-panel">
+          <img
+            class="mascot"
+            src="assets/mascot.png"
+            width="280"
+            height="280"
+            alt=""
+          />
+          <p>
+            Register agent clients from the app. Guidance lands in the project.
+            Conversations stay in your editor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="download" id="download" aria-labelledby="download-title">
+      <div class="download-inner reveal">
+        <h2 id="download-title">Get Dodalu</h2>
+        <p>
+          Windows installer via Velopack. Updates can check on launch from this
+          same site.
+        </p>
+        <div class="download-actions">
+          <a class="btn primary large" id="download-setup" href="feed/">
+            Download Windows Setup
+          </a>
+          <a class="btn quiet" href="feed/">Browse release files</a>
+        </div>
+        <p class="fineprint">
+          macOS not available yet · Linux packaging is on the roadmap ·
+          <a href="https://github.com/RossWright/Dodalu-Releases">GitHub</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo.png" width="28" height="28" alt="" />
+        <span>Dodalu</span>
+      </div>
+      <p>© <span id="year"></span> Ross Wright · Desktop software for local project boards</p>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
