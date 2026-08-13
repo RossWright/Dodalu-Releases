@@ -52,21 +52,22 @@
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#download">Download</a>
-          <a class="btn quiet" href="#how">See how it works</a>
+          <a class="btn quiet" href="https://pay.dodalu.com/">Buy a license</a>
         </div>
       </div>
 
       <div class="hero-visual reveal reveal-delay" aria-label="Product preview">
-        <!-- TODO: replace with a real board screenshot (assets/hero-board.png) -->
         <div class="hero-frame">
-          <img
-            class="hero-shot"
-            src="assets/hero-board.svg"
-            width="1280"
-            height="800"
-            alt="Placeholder preview of a Dodalu kanban board"
-          />
-          <p class="placeholder-note">Placeholder board art — swap for a real screenshot</p>
+          <picture>
+            <source srcset="assets/hero-board.webp" type="image/webp" />
+            <img
+              class="hero-shot"
+              src="assets/hero-board.png"
+              width="1024"
+              height="619"
+              alt="Dodalu kanban board with To Do, Doing, Test, and Done columns"
+            />
+          </picture>
         </div>
       </div>
     </section>
@@ -80,6 +81,18 @@
           machine — open any folder and get a board.
         </p>
       </div>
+      <figure class="shot reveal reveal-delay">
+        <picture>
+          <source srcset="assets/welcome.webp" type="image/webp" />
+          <img
+            src="assets/welcome.png"
+            width="1024"
+            height="619"
+            alt="Dodalu welcome screen listing recent project boards"
+          />
+        </picture>
+        <figcaption>Pick a known board or open another project folder.</figcaption>
+      </figure>
     </section>
 
     <section class="steps" aria-label="How Dodalu fits a project">
@@ -109,6 +122,28 @@
       </article>
     </section>
 
+    <section class="shot-section" aria-labelledby="docs-shot-title">
+      <div class="shot-section-copy reveal">
+        <h2 id="docs-shot-title">Details stay in the project tree.</h2>
+        <p>
+          Select a card and the Markdown doc opens beside the board — same
+          window, same folder, no separate wiki app.
+        </p>
+      </div>
+      <figure class="shot reveal reveal-delay">
+        <picture>
+          <source srcset="assets/docs-pane.webp" type="image/webp" />
+          <img
+            src="assets/docs-pane.png"
+            width="1024"
+            height="619"
+            alt="Dodalu board with a card’s Markdown document open in the side pane"
+          />
+        </picture>
+        <figcaption>Board on the left, card Markdown on the right.</figcaption>
+      </figure>
+    </section>
+
     <section class="split" id="mcp" aria-labelledby="mcp-title">
       <div class="split-copy reveal">
         <h2 id="mcp-title">Agents stay outside the app.</h2>
@@ -119,15 +154,17 @@
         </p>
       </div>
       <div class="split-visual reveal reveal-delay">
-        <!-- TODO: replace with a short MCP / Agents flyout screenshot -->
         <div class="quote-panel">
-          <img
-            class="mascot"
-            src="assets/mascot.png"
-            width="280"
-            height="280"
-            alt=""
-          />
+          <picture>
+            <source srcset="assets/mascot.webp" type="image/webp" />
+            <img
+              class="mascot"
+              src="assets/mascot.png"
+              width="280"
+              height="187"
+              alt=""
+            />
+          </picture>
           <p>
             Register agent clients from the app. Guidance lands in the project.
             Conversations stay in your editor.
@@ -141,7 +178,9 @@
         <h2 id="download-title">Get Dodalu</h2>
         <p>
           Windows Setup and Linux AppImage / <code>.deb</code> via Velopack.
-          Installed builds can check for updates from this site.
+          Installed builds can check for updates from this site. Licenses are
+          optional support — buy at
+          <a href="https://pay.dodalu.com/">pay.dodalu.com</a>.
         </p>
         <div class="download-actions">
           <a class="btn primary large" id="download-setup" href="feed/">
