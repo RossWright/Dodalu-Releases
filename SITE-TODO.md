@@ -19,7 +19,7 @@ there.
 
 7. **Favicon set** — add `favicon.ico` + Apple touch icon from `art/logo.png`
    / `new_icon.png` (multiple sizes).
-8. **Privacy / contact** — only if you care before launch (footer link).
+8. ~~**Privacy / contact**~~ — `privacy.html`, footer link. Legal entity Pross Co; contact `ross@dodalu.com`.
 9. **Optional Agents flyout screenshot** — MCP registration for the
    “Agents stay outside” section (replace or sit beside the mascot panel).
 
