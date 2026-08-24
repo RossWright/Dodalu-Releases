@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dodalu — Desktop kanban next to your code</title>
+  <title>Dodalu — See the work. Keep it yours.</title>
   <meta
     name="description"
-    content="Dodalu is a desktop kanban board for work that lives beside a real source tree. Local JSON board state, Markdown card docs, optional MCP for external agents."
+    content="Dodalu is a personal kanban board that lives in a folder on your machine — for projects, plans, and everything you’re juggling. No account. No cloud workspace."
   />
   <meta property="og:title" content="Dodalu" />
   <meta
     property="og:description"
-    content="Desktop kanban next to your code. Local boards. Markdown cards. Agents stay outside."
+    content="See the work. Keep it yours. A personal board on your machine — no account, no cloud workspace."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dodalu.com/" />
@@ -35,8 +35,9 @@
       <span>Dodalu</span>
     </a>
     <nav class="top-nav" aria-label="Primary">
-      <a href="#how">How it works</a>
-      <a href="#mcp">Agents</a>
+      <a href="#uses">Uses</a>
+      <a href="#notes">Notes</a>
+      <a href="#agents">Agents</a>
       <a class="nav-download" href="#download">Download</a>
     </nav>
   </header>
@@ -45,10 +46,11 @@
     <section class="hero" aria-labelledby="hero-brand">
       <div class="hero-copy reveal">
         <p class="hero-brand" id="hero-brand">Dodalu</p>
-        <h1 class="hero-line">Kanban that lives next to the code.</h1>
+        <h1 class="hero-line">See the work. Keep it yours.</h1>
         <p class="hero-support">
-          A desktop board for folders you already have — columns and cards in
-          local JSON, details in Markdown, no cloud kanban account required.
+          A personal kanban board that lives in a folder on your machine —
+          for projects, plans, and everything you’re juggling. No account.
+          No cloud workspace.
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#download">Download</a>
@@ -72,13 +74,57 @@
       </div>
     </section>
 
+    <p class="trust-line reveal">
+      <span>Local files.</span> Open a folder → get a board. You own the data.
+    </p>
+
+    <section class="uses" id="uses" aria-labelledby="uses-title">
+      <div class="uses-lead reveal">
+        <h2 id="uses-title">One person. A lot of moving pieces.</h2>
+        <p>
+          Dodalu is built for solo work — the stuff that falls apart in a
+          shared team board, or never belonged there in the first place.
+        </p>
+      </div>
+      <div class="uses-grid">
+        <article class="use-item reveal">
+          <h3>Ship a project without losing the thread</h3>
+          <p>
+            Side apps, client work, weekend builds — columns for what’s next,
+            what’s stuck, and what’s done.
+          </p>
+        </article>
+        <article class="use-item reveal reveal-delay">
+          <h3>Keep life goals off the guilt spreadsheet</h3>
+          <p>
+            Fitness, finances, learning — a board you actually look at, not
+            a list that grows forever in a notes app.
+          </p>
+        </article>
+        <article class="use-item reveal">
+          <h3>Plan the messy middle</h3>
+          <p>
+            Trips, moves, renovations, launch weeks — stages you invent for
+            the real sequence, not a generic “todo / doing / done.”
+          </p>
+        </article>
+        <article class="use-item reveal reveal-delay">
+          <h3>Run a personal pipeline</h3>
+          <p>
+            Writing, courses, content, job applications — each piece is a
+            card you can move as it progresses.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <section class="band" id="how" aria-labelledby="how-title">
       <div class="band-inner reveal">
         <h2 id="how-title">Open a folder. Get a board.</h2>
         <p class="band-support">
-          Dodalu keeps board content in <code>dodalu.json</code> at the project
-          root, with Markdown card docs in the tree. Appearance stays on this
-          machine — open any folder and get a board.
+          Point Dodalu at any folder. You get columns and cards on this
+          machine — nothing to sign up for, nothing syncing to someone else’s
+          servers unless you choose to.
         </p>
       </div>
       <figure class="shot reveal reveal-delay">
@@ -91,43 +137,43 @@
             alt="Dodalu welcome screen listing recent project boards"
           />
         </picture>
-        <figcaption>Pick a known board or open another project folder.</figcaption>
+        <figcaption>Pick a board you’ve used, or open another folder.</figcaption>
       </figure>
     </section>
 
-    <section class="steps" aria-label="How Dodalu fits a project">
+    <section class="steps" aria-label="What you can do on a board">
       <article class="step reveal">
         <span class="step-index">01</span>
         <h3>Shape the board</h3>
         <p>
-          Columns, colors, wallpaper, and tags — tuned for the project in front
-          of you, not a hosted workspace template.
+          Columns, colors, wallpaper, tags, and buckets — tuned to this
+          project, not a workspace template.
         </p>
       </article>
       <article class="step reveal reveal-delay">
         <span class="step-index">02</span>
-        <h3>Write beside the cards</h3>
+        <h3>Write real notes</h3>
         <p>
-          Open a card’s Markdown in the docs pane: preview by default, source
-          when you need it, or jump to your external editor.
+          Every card can open a Markdown document beside the board —
+          checklists, research, specs, packing lists.
         </p>
       </article>
       <article class="step reveal reveal-delay-2">
         <span class="step-index">03</span>
-        <h3>Keep git out of the way</h3>
+        <h3>Stay in control</h3>
         <p>
-          Live board state stays git-ignored. Durable notes commit with the
-          project like any other doc.
+          Search, tag filters, archive, undo. Live board state stays on
+          your machine; durable notes can live with the project.
         </p>
       </article>
     </section>
 
-    <section class="shot-section" aria-labelledby="docs-shot-title">
+    <section class="shot-section" id="notes" aria-labelledby="notes-title">
       <div class="shot-section-copy reveal">
-        <h2 id="docs-shot-title">Details stay in the project tree.</h2>
+        <h2 id="notes-title">Cards that hold more than a title.</h2>
         <p>
-          Select a card and the Markdown doc opens beside the board — same
-          window, same folder, no separate wiki app.
+          Select a card and its Markdown opens in the same window — preview
+          by default, edit when you need it, or jump to your usual editor.
         </p>
       </div>
       <figure class="shot reveal reveal-delay">
@@ -140,17 +186,18 @@
             alt="Dodalu board with a card’s Markdown document open in the side pane"
           />
         </picture>
-        <figcaption>Board on the left, card Markdown on the right.</figcaption>
+        <figcaption>Board on the left, the card’s note on the right.</figcaption>
       </figure>
     </section>
 
-    <section class="split" id="mcp" aria-labelledby="mcp-title">
+    <section class="split" id="agents" aria-labelledby="agents-title">
       <div class="split-copy reveal">
-        <h2 id="mcp-title">Agents stay outside the app.</h2>
+        <h2 id="agents-title">Building with agents? Give them a board too.</h2>
         <p>
-          Dodalu is not a chat host. An optional MCP server exposes board tools
-          to clients you already use — Cursor, Codex, Copilot, Claude Desktop —
-          while the desktop UI stays a calm place to move work by hand.
+          If you already work in Cursor, Claude Desktop, Codex, or Copilot,
+          optional MCP lets those tools create and move cards on your board —
+          while Dodalu stays a calm place to see the whole picture. Conversations
+          stay in your editor; the board stays yours.
         </p>
       </div>
       <div class="split-visual reveal reveal-delay">
@@ -166,8 +213,8 @@
             />
           </picture>
           <p>
-            Register agent clients from the app. Guidance lands in the project.
-            Conversations stay in your editor.
+            Register agent clients from the app when you want them. Skip it
+            entirely if you just want a quiet personal board.
           </p>
         </div>
       </div>
@@ -177,9 +224,9 @@
       <div class="download-inner reveal">
         <h2 id="download-title">Get Dodalu</h2>
         <p>
-          Windows Setup and Linux AppImage / <code>.deb</code> via Velopack.
-          Installed builds can check for updates from this site. Licenses are
-          optional support — buy at
+          Windows Setup and Linux AppImage / <code>.deb</code>. Installed
+          builds can check for updates from this site. Licenses are optional
+          support — buy at
           <a href="https://pay.dodalu.com/">pay.dodalu.com</a>.
         </p>
         <div class="download-actions">
@@ -210,7 +257,8 @@
         <span>Dodalu</span>
       </div>
       <p>
-        © <span id="year"></span> <a href="https://pross.co/">Pross Co</a> · Desktop software for local project boards ·
+        © <span id="year"></span> <a href="https://pross.co/">Pross Co</a> ·
+        Desktop software for local project boards ·
         <a href="privacy.html">Privacy</a>
       </p>
     </div>
