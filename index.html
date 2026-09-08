@@ -6,7 +6,7 @@
   <title>Dodalu — See the work. Keep it yours.</title>
   <meta
     name="description"
-    content="Dodalu is a personal kanban board that lives in a folder on your machine — for projects, plans, and everything you’re juggling. No account. No cloud workspace."
+    content="Dodalu is a personal desktop kanban board that lives on your machine — quick boards, project folders, Markdown card notes, buckets, tags, and optional MCP for agents. No account required."
   />
   <meta property="og:title" content="Dodalu" />
   <meta
@@ -38,6 +38,7 @@
       <a href="#uses">Uses</a>
       <a href="#notes">Notes</a>
       <a href="#agents">Agents</a>
+      <a href="#features">Features</a>
       <a class="nav-download" href="#download">Download</a>
     </nav>
   </header>
@@ -48,9 +49,8 @@
         <p class="hero-brand" id="hero-brand">Dodalu</p>
         <h1 class="hero-line">See the work. Keep it yours.</h1>
         <p class="hero-support">
-          A personal kanban board that lives in a folder on your machine —
-          for projects, plans, and everything you’re juggling. No account.
-          No cloud workspace.
+          A personal kanban board on your desktop — for projects, plans, and
+          everything you’re juggling. No account. No cloud workspace.
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#download">Download</a>
@@ -66,8 +66,8 @@
               class="hero-shot"
               src="assets/hero-board.png"
               width="1024"
-              height="619"
-              alt="Dodalu kanban board with To Do, Doing, Test, and Done columns"
+              height="695"
+              alt="Dodalu kanban board with To Do, Doing, Test, and Done columns on an autumn wallpaper"
             />
           </picture>
         </div>
@@ -75,7 +75,7 @@
     </section>
 
     <p class="trust-line reveal">
-      <span>Local files.</span> Open a folder → get a board. You own the data.
+      <span>Local files.</span> Quick board or project folder — you own the data.
     </p>
 
     <section class="uses" id="uses" aria-labelledby="uses-title">
@@ -120,11 +120,12 @@
 
     <section class="band" id="how" aria-labelledby="how-title">
       <div class="band-inner reveal">
-        <h2 id="how-title">Open a folder. Get a board.</h2>
+        <h2 id="how-title">Start a board your way.</h2>
         <p class="band-support">
-          Point Dodalu at any folder. You get columns and cards on this
-          machine — nothing to sign up for, nothing syncing to someone else’s
-          servers unless you choose to.
+          The welcome screen keeps your boards in one place. New Board walks
+          you through location, name, structure, look, and settings — a quick
+          board on this computer, a new or existing project folder, or bring
+          an existing board along from a JSON export.
         </p>
       </div>
       <figure class="shot reveal reveal-delay">
@@ -133,11 +134,11 @@
           <img
             src="assets/welcome.png"
             width="1024"
-            height="619"
-            alt="Dodalu welcome screen listing recent project boards"
+            height="692"
+            alt="Dodalu welcome screen with New Board wizard choosing where the board should live"
           />
         </picture>
-        <figcaption>Pick a board you’ve used, or open another folder.</figcaption>
+        <figcaption>Your boards catalog, with a guided New Board wizard.</figcaption>
       </figure>
     </section>
 
@@ -146,8 +147,8 @@
         <span class="step-index">01</span>
         <h3>Shape the board</h3>
         <p>
-          Columns, colors, wallpaper, tags, and buckets — tuned to this
-          project, not a workspace template.
+          Stages, colors, themes, wallpaper, tags, and buckets — tuned to
+          this work, not a hosted workspace template.
         </p>
       </article>
       <article class="step reveal reveal-delay">
@@ -162,8 +163,8 @@
         <span class="step-index">03</span>
         <h3>Stay in control</h3>
         <p>
-          Search, tag filters, archive, undo. Live board state stays on
-          your machine; durable notes can live with the project.
+          Search, tag filters, archive, undo, copy and paste across boards.
+          Your files stay on this machine.
         </p>
       </article>
     </section>
@@ -246,6 +247,38 @@
           Snap remains local/manual for now ·
           <a href="https://github.com/RossWright/Dodalu-Releases">GitHub</a>
         </p>
+      </div>
+    </section>
+
+    <section class="features" id="features" aria-labelledby="features-title">
+      <div class="features-inner reveal">
+        <h2 id="features-title">Features</h2>
+        <p class="features-lead">
+          Dodalu is a local-first desktop kanban app for a single user. Here is
+          what it does today:
+        </p>
+        <ul class="feature-list">
+          <li>Personal kanban boards that run on Windows and Linux (desktop app)</li>
+          <li>No account and no required cloud sync — board data stays on your computer</li>
+          <li>Boards catalog on the welcome screen with recent projects and sorting</li>
+          <li>New Board wizard: location, name, structure, look, and settings</li>
+          <li>Quick boards stored on this computer, or boards inside a new or existing project folder</li>
+          <li>Import a board from a Trello JSON export (lists, cards, labels, checklists)</li>
+          <li>Custom stages (columns) with colors, widths, collapse, and reorder in edit mode</li>
+          <li>Built-in themes, board wallpaper, and card/selection/bucket colors</li>
+          <li>Cards with titles, summaries, colored tags, and optional Markdown backing documents</li>
+          <li>In-app Markdown preview and source editor, with open-in-external-editor</li>
+          <li>Buckets to group related cards one level deep inside a stage</li>
+          <li>Search across titles and summaries, with optional search in Spec documents</li>
+          <li>Tag filters on the board; manage a project tag catalog</li>
+          <li>Archive and restore cards (optional permanent delete)</li>
+          <li>Undo and redo for board content changes</li>
+          <li>Cut, copy, paste, and copy-to between boards; drag cards across Dodalu windows</li>
+          <li>Optional effort tracking with estimates and work entries</li>
+          <li>Optional MCP server so external agents (Cursor, Claude Desktop, Codex, Copilot) can create, update, and move cards</li>
+          <li>Board state as local JSON plus Markdown files you can keep with a project</li>
+          <li>In-app updates from the Dodalu release feed; optional paid license via Lemon Squeezy</li>
+        </ul>
       </div>
     </section>
   </main>

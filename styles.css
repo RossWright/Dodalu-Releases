@@ -370,9 +370,56 @@ code {
   max-width: 36ch;
 }
 
+.features {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.5rem 4.5rem;
+}
+
+.features-inner {
+  border-top: 1px solid var(--line);
+  padding-top: 3rem;
+}
+
+.features h2 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  letter-spacing: -0.03em;
+}
+
+.features-lead {
+  margin: 0 0 1.25rem;
+  max-width: 48ch;
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.feature-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  columns: 2;
+  column-gap: 2.5rem;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+.feature-list li {
+  break-inside: avoid;
+  margin: 0 0 0.55rem;
+  padding-left: 0.15rem;
+}
+
+@media (max-width: 900px) {
+  .feature-list {
+    columns: 1;
+  }
+}
+
 .band-support {
   margin: 0;
-  max-width: 42ch;
+  max-width: 52ch;
   color: var(--ink-soft);
   font-size: 1.2rem;
 }
