@@ -13,7 +13,7 @@ there.
 4. ~~**Custom domain DNS**~~ — `dodalu.com` / `www` on GitHub Pages.
 5. ~~**Download button accuracy**~~ — `site.js` resolves Setup / AppImage / `.deb`
    from `/feed/index.html`.
-6. ~~**License / pricing blurb**~~ — Buy link → `https://pay.dodalu.com/`.
+6. ~~**Support / pricing blurb**~~ — Support link → `https://pay.dodalu.com/` (free forever; supporter code quiets the nag robot).
 
 ## Should do
 
