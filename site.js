@@ -28,6 +28,7 @@
     { id: "download-setup", pattern: /href="([^"]*Setup\.exe)"/i },
     { id: "download-appimage", pattern: /href="([^"]*\.AppImage)"/i },
     { id: "download-deb", pattern: /href="([^"]*\.deb)"/i },
+    { id: "download-macos", pattern: /href="([^"]*osx-arm64[^"]*\.zip)"/i },
   ];
 
   if (!targets.some((t) => document.getElementById(t.id))) {
