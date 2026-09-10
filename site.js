@@ -23,19 +23,48 @@
     reveals.forEach((el) => observer.observe(el));
   }
 
-  // Prefer concrete package hrefs when the feed index has been published.
-  const targets = [
-    { id: "download-setup", pattern: /href="([^"]*Setup\.exe)"/i },
-    { id: "download-appimage", pattern: /href="([^"]*\.AppImage)"/i },
-    { id: "download-deb", pattern: /href="([^"]*\.deb)"/i },
-    { id: "download-macos", pattern: /href="([^"]*osx-arm64[^"]*\.zip)"/i },
-  ];
+  const platformButtons = Array.from(document.querySelectorAll(".platform-btn"));
+  const panelIds = ["win", "linux", "mac"];
 
-  if (!targets.some((t) => document.getElementById(t.id))) {
-    return;
-  }
+  const setPlatform = (name) => {
+    for (const key of panelIds) {
+      const panel = document.getElementById(`panel-${key}`);
+      if (!panel) {
+        continue;
+      }
+      const open = Boolean(name) && key === name;
+      panel.classList.toggle("is-open", open);
+      if (open) {
+        panel.removeAttribute("hidden");
+      } else {
+        panel.setAttribute("hidden", "");
+      }
+    }
+    platformButtons.forEach((btn) => {
+      const active = Boolean(name) && btn.getAttribute("data-platform") === name;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-expanded", active ? "true" : "false");
+    });
+  };
+
+  platformButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const name = btn.getAttribute("data-platform");
+      if (!name) {
+        return;
+      }
+      setPlatform(btn.classList.contains("is-active") ? null : name);
+    });
+  });
 
   const feedBase = new URL("feed/", window.location.href);
+  const targets = [
+    { id: "download-win-beta", pattern: /href="([^"]*Setup\.exe)"/i },
+    { id: "download-linux-appimage-beta", pattern: /href="([^"]*\.AppImage)"/i },
+    { id: "download-linux-deb-beta", pattern: /href="([^"]*\.deb)"/i },
+    { id: "download-mac-beta", pattern: /href="([^"]*osx-(?:arm64|x64)[^"]*\.zip)"/i },
+  ];
+
   fetch(feedBase.href)
     .then((response) => (response.ok ? response.text() : Promise.reject()))
     .then((html) => {

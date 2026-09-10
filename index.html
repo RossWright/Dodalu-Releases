@@ -225,34 +225,90 @@
       <div class="download-inner reveal">
         <h2 id="download-title">Get Dodalu</h2>
         <p>
-          Free forever — every feature, no account. Windows Setup, Linux
-          AppImage / <code>.deb</code>, and an unsigned macOS <code>.app</code> zip;
-          installed Windows and Linux builds can check for updates
-          here. If Dodalu earns its keep on your machine,
+          Free forever — every feature, no account. If Dodalu earns its keep on
+          your machine,
           <a href="https://pay.dodalu.com/">support the project</a> and we’ll
           send a code that tells the little robot to stop calling you a
           freeloader.
         </p>
-        <div class="download-actions">
-          <a class="btn primary large" id="download-setup" href="feed/">
-            Windows Setup
-          </a>
-          <a class="btn quiet large" id="download-appimage" href="feed/">
-            Linux AppImage
-          </a>
-          <a class="btn quiet large" id="download-deb" href="feed/">
-            Linux .deb
-          </a>
-          <a class="btn quiet large" id="download-macos" href="feed/">
-            macOS (unsigned)
-          </a>
-          <a class="btn quiet" href="feed/">Browse release files</a>
+        <div class="platform-picker" role="group" aria-label="Choose your platform">
+          <button type="button" class="btn large platform-btn" data-platform="win" aria-controls="panel-win" aria-expanded="false">
+            Windows
+          </button>
+          <button type="button" class="btn large platform-btn" data-platform="linux" aria-controls="panel-linux" aria-expanded="false">
+            Linux
+          </button>
+          <button type="button" class="btn large platform-btn" data-platform="mac" aria-controls="panel-mac" aria-expanded="false">
+            macOS
+          </button>
         </div>
-        <p class="fineprint">
-          Beta channel packages are on the feed now · macOS zip is unsigned
-          (right-click Open) · Snap remains local/manual for now ·
-          <a href="https://github.com/RossWright/Dodalu-Releases">GitHub</a>
-        </p>
+
+        <div class="platform-panel" id="panel-win" hidden>
+          <article class="pkg">
+            <h4>Beta</h4>
+            <p>Current public builds — newer features, still settling.</p>
+            <a class="btn primary" id="download-win-beta" href="feed/">Download Windows Setup (Beta)</a>
+          </article>
+          <article class="pkg">
+            <h4>Stable</h4>
+            <p class="pkg-note">
+              Stable isn’t published yet. Use Beta for now.
+            </p>
+          </article>
+          <p class="platform-foot">
+            Once installed, Dodalu can check this site and update itself.
+          </p>
+        </div>
+
+        <div class="platform-panel" id="panel-linux" hidden>
+          <article class="pkg">
+            <h4>Beta</h4>
+            <p>Current public builds — pick how you want to install:</p>
+            <div class="pkg-actions">
+              <a class="btn primary" id="download-linux-appimage-beta" href="feed/">Portable download (Beta)</a>
+              <a class="btn primary" id="download-linux-deb-beta" href="feed/">Debian / Ubuntu (Beta)</a>
+            </div>
+          </article>
+          <article class="pkg">
+            <h4>Stable</h4>
+            <p class="pkg-note">
+              Stable isn’t published yet. Use Beta for now.
+            </p>
+          </article>
+          <p class="platform-foot">
+            Once installed, Dodalu can check this site and update itself.
+          </p>
+        </div>
+
+        <div class="platform-panel" id="panel-mac" hidden>
+          <article class="pkg">
+            <h4>Beta</h4>
+            <p>
+              Unsigned Apple Silicon build for now. Unzip, then right-click
+              Dodalu.app → Open (don’t double-click first). If macOS says it is
+              damaged, that is Gatekeeper — clear the quarantine flag and try
+              Open again.
+            </p>
+            <a class="btn primary" id="download-mac-beta" href="feed/">Download macOS (Beta)</a>
+            <p class="pkg-aside">
+              Details:
+              <a href="feed/README-macos.txt">how to open on macOS</a>
+            </p>
+          </article>
+          <article class="pkg">
+            <h4>Stable</h4>
+            <p class="pkg-note">
+              Stable isn’t on macOS yet. Apple’s fees for shipping free software
+              there are real — if enough people
+              <a href="https://pay.dodalu.com/">support the project</a>, we can
+              cover notarization and a proper Stable channel.
+            </p>
+          </article>
+          <p class="platform-foot">
+            This macOS zip does not update itself yet — grab a newer zip from
+            here when you want a newer build.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -305,6 +361,6 @@
     </div>
   </footer>
 
-  <script src="site.js"></script>
+  <script src="site.js?v=5"></script>
 </body>
 </html>

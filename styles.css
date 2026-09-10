@@ -580,6 +580,130 @@ code {
   margin-bottom: 1.1rem;
 }
 
+.platform-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.1rem;
+  align-items: center;
+  margin-bottom: 1.1rem;
+}
+
+.platform-picker .platform-btn {
+  cursor: pointer;
+  border: 1px solid rgba(243, 241, 234, 0.45);
+  background: transparent;
+  color: #e8f2f0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  outline: none;
+  box-shadow: none;
+}
+
+.platform-picker .platform-btn:hover {
+  background: rgba(243, 241, 234, 0.12);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.platform-picker .platform-btn:focus-visible {
+  box-shadow: 0 0 0 2px rgba(231, 192, 122, 0.85);
+}
+
+.platform-picker .platform-btn.is-active {
+  background: #f3f1ea;
+  color: var(--ink);
+  border-color: #f3f1ea;
+}
+
+.platform-picker .platform-btn.is-active:hover {
+  background: #fff;
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+
+.platform-panel {
+  margin: 0;
+  padding: 1.25rem 1.35rem;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(238, 246, 244, 0.12);
+  display: none;
+}
+
+.platform-panel.is-open {
+  display: block;
+}
+
+.platform-panel[hidden]:not(.is-open) {
+  display: none !important;
+}
+
+.platform-panel h4 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #f4faf8;
+}
+
+.platform-panel > p,
+.pkg p {
+  margin: 0 0 0.85rem;
+  max-width: 48ch;
+  color: rgba(238, 246, 244, 0.82);
+  font-size: 1.02rem;
+}
+
+.pkg {
+  margin: 0 0 1.35rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(238, 246, 244, 0.12);
+}
+
+.pkg:first-of-type {
+  border-top: 0;
+  padding-top: 0.25rem;
+}
+
+.pkg-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pkg-note {
+  margin: 0 !important;
+}
+
+.pkg-aside {
+  margin: 0.85rem 0 0 !important;
+  max-width: 48ch;
+  color: rgba(238, 246, 244, 0.72);
+  font-size: 0.95rem;
+}
+
+.platform-foot {
+  margin: 0.25rem 0 0 !important;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(238, 246, 244, 0.12);
+  max-width: 48ch;
+  color: rgba(238, 246, 244, 0.72) !important;
+  font-size: 0.95rem !important;
+}
+
+.platform-panel a:not(.btn) {
+  color: #e7c07a;
+}
+
+.download .pkg .btn.primary {
+  background: #f3f1ea;
+  color: var(--ink);
+}
+
+.download .pkg .btn.primary:hover {
+  background: #fff;
+}
+
 .download .btn.primary {
   background: #f3f1ea;
   color: var(--ink);
