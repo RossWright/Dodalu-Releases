@@ -1,366 +1,210 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dodalu — See the work. Keep it yours.</title>
-  <meta
-    name="description"
-    content="Dodalu is a personal desktop kanban board that lives on your machine — quick boards, project folders, Markdown card notes, buckets, tags, and optional MCP for agents. No account required."
-  />
-  <meta property="og:title" content="Dodalu" />
-  <meta
-    property="og:description"
-    content="See the work. Keep it yours. A personal board on your machine — no account, no cloud workspace."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://dodalu.com/" />
-  <meta property="og:image" content="https://dodalu.com/assets/og-share.png" />
-  <meta name="theme-color" content="#1c2a2e" />
-  <link rel="icon" href="assets/icon.png" type="image/png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:opsz,ital,wght@8..60,0,400;8..60,0,600;8..60,1,400&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Dodalu: Single-player Kanban</title>
+  <meta name="description" content="Dodalu is a free, customizable, single-player kanban app that lives on your computer and works with optional AI agents.">
+  <meta property="og:title" content="Dodalu: Single-player Kanban">
+  <meta property="og:description" content="A free, customizable desktop kanban app. No account, no required cloud, no usage limits.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dodalu.com/">
+  <meta property="og:image" content="https://dodalu.com/assets/og-share.png">
+  <meta name="theme-color" content="#edf0f4">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="atmosphere" aria-hidden="true"></div>
+  <button class="theme-float" data-theme-toggle><span data-theme-icon>☾</span></button>
 
-  <header class="top">
-    <a class="brand-mark" href="#top" aria-label="Dodalu home">
-      <img src="assets/logo.png" width="36" height="36" alt="" />
-      <span>Dodalu</span>
-    </a>
-    <nav class="top-nav" aria-label="Primary">
-      <a href="#uses">Uses</a>
-      <a href="#notes">Notes</a>
-      <a href="#agents">Agents</a>
-      <a href="#features">Features</a>
-      <a class="nav-download" href="#download">Download</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-brand">
-      <div class="hero-copy reveal">
-        <p class="hero-brand" id="hero-brand">Dodalu</p>
-        <h1 class="hero-line">See the work. Keep it yours.</h1>
-        <p class="hero-support">
-          A personal kanban board on your desktop — for projects, plans, and
-          everything you’re juggling. No account. No cloud workspace.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#download">Download</a>
-          <a class="btn quiet" href="https://pay.dodalu.com/">Support Dodalu</a>
+  <main>
+    <section class="hero">
+      <h1><img class="hero-logo" src="assets/logo.png" alt=""><span>Dodalu:</span> Single-player Kanban</h1>
+      <div class="hero-body">
+        <div class="hero-copy">
+          <p class="lede">
+            Dodalu (doo-DUH-loo) is a simple "cards in columns" desktop app for keeping track of projects or organizing your thoughts.
+            You can completely customize how it looks and works.
+            All your data lives on your computer, so no server, no account, no usage limits.
+            Your AI agents can reliably operate on your boards via MCP.
+          </p>
+          <p class="lede">
+            And it's all <b>FREE</b>... but not guilt-free. Yeah, it's nag-ware, but not super annoying. Kinda cute actually. You'll see. Just $20 ends the guilt trip.
+          </p>
+          <div class="actions">
+            <a class="button" href="#download">Get Dodalu</a>
+            <a class="button" href="https://pay.dodalu.com/">Support Dodalu</a>
+          </div>
         </div>
-      </div>
-
-      <div class="hero-visual reveal reveal-delay" aria-label="Product preview">
-        <div class="hero-frame">
-          <picture>
-            <source srcset="assets/hero-board.webp" type="image/webp" />
-            <img
-              class="hero-shot"
-              src="assets/hero-board.png"
-              width="1024"
-              height="695"
-              alt="Dodalu kanban board with To Do, Doing, Test, and Done columns on an autumn wallpaper"
-            />
-          </picture>
+        <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Dodalu screenshots">
+          <div class="carousel-viewport">
+            <figure class="carousel-slide is-active" data-slide>
+              <img src="assets/hero-board.webp" alt="Dodalu showing a kanban board with To Do, Doing, Test, and Done stages">
+              <figcaption>The board keeps every stage in sight.</figcaption>
+            </figure>
+            <figure class="carousel-slide" data-slide aria-hidden="true">
+              <img src="assets/stage-widths-and-collapse.jpg" alt="Dodalu showing a wide To Do stage and a collapsed Archived stage">
+              <figcaption>Make room where you need it, and collapse what you don’t.</figcaption>
+            </figure>
+            <figure class="carousel-slide" data-slide aria-hidden="true">
+              <img src="assets/welcome.webp" alt="Dodalu welcome screen and New Board wizard">
+              <figcaption>Keep recent boards together and start the next one your way.</figcaption>
+            </figure>
+            <figure class="carousel-slide" data-slide aria-hidden="true">
+              <img src="assets/docs-pane.webp" alt="Dodalu with a card’s Markdown document open beside the board">
+              <figcaption>Open the useful detail without losing the board.</figcaption>
+            </figure>
+          </div>
+          <button class="carousel-arrow previous" type="button" data-carousel-previous aria-label="Previous screenshot">←</button>
+          <button class="carousel-arrow next" type="button" data-carousel-next aria-label="Next screenshot">→</button>
+          <div class="carousel-dots" role="group" aria-label="Choose screenshot">
+            <button class="is-active" type="button" data-carousel-dot="0" aria-label="Show board screenshot" aria-current="true"></button>
+            <button type="button" data-carousel-dot="1" aria-label="Show adjustable stages screenshot"></button>
+            <button type="button" data-carousel-dot="2" aria-label="Show boards catalog screenshot"></button>
+            <button type="button" data-carousel-dot="3" aria-label="Show card document screenshot"></button>
+          </div>
         </div>
       </div>
     </section>
 
-    <p class="trust-line reveal">
-      <span>Local files.</span> Quick board or project folder — you own the data.
-    </p>
-
-    <section class="uses" id="uses" aria-labelledby="uses-title">
-      <div class="uses-lead reveal">
-        <h2 id="uses-title">One person. A lot of moving pieces.</h2>
-        <p>
-          Dodalu is built for solo work — the stuff that falls apart in a
-          shared team board, or never belonged there in the first place.
-        </p>
+    <section class="board-section" id="features">
+      <div class="section-heading">
+        <h2>Everything that’s in it.</h2>
+        <p>Dodalu started simple. Then I started using it to work on it and it got fancy. I got more ideas, but
+          <a href="https://github.com/RossWright/Dodalu-Releases/issues">what ideas do YOU have?</a></p>
       </div>
-      <div class="uses-grid">
-        <article class="use-item reveal">
-          <h3>Ship a project without losing the thread</h3>
-          <p>
-            Side apps, client work, weekend builds — columns for what’s next,
-            what’s stuck, and what’s done.
-          </p>
+      <div class="feature-board">
+        <article class="feature-stage coral">
+          <header><h3>Start a board</h3></header>
+          <div class="feature-card"><h4>Windows, Linux, and macOS</h4><p>A real desktop app, with current public beta builds for all three.</p></div>
+          <div class="feature-card"><h4>Your boards, remembered</h4><p>The welcome screen keeps a sortable catalog of recent boards so you can get back to work quickly.</p><button class="media-link" type="button" data-media="assets/welcome.webp" data-media-title="Your boards, remembered" data-media-copy="The welcome screen keeps recent boards within reach. Sort them, reorder them, or start another without digging through folders.">See the boards screen <span>↗</span></button></div>
+          <div class="feature-card"><h4>A guided start</h4><p>Choose a location, name, structure, look, and settings in the New Board wizard.</p><button class="media-link" type="button" data-media="assets/welcome.webp" data-media-title="Start a board your way" data-media-copy="The New Board wizard walks through where the board lives, what it is called, its starting structure, appearance, and optional settings.">See the wizard <span>↗</span></button></div>
+          <div class="feature-card"><h4>Quick or project-based</h4><p>Keep a quick board on this computer or put one inside a new or existing project folder.</p></div>
+          <div class="feature-card"><h4>Bring a Trello board</h4><p>Import lists, cards, labels, and checklists from a Trello JSON export (just add .json to your Trello URL and download it).</p></div>
         </article>
-        <article class="use-item reveal reveal-delay">
-          <h3>Keep life goals off the guilt spreadsheet</h3>
-          <p>
-            Fitness, finances, learning — a board you actually look at, not
-            a list that grows forever in a notes app.
-          </p>
+        <article class="feature-stage gold">
+          <header><h3>Make it yours</h3></header>
+          <div class="feature-card"><h4>Stages that fit the work</h4><p>Name, color, resize, collapse, and reorder stages instead of settling for somebody else’s workflow.</p><button class="media-link" type="button" data-media="assets/stage-widths-and-collapse.jpg" data-media-title="Stages that fit the work" data-media-copy="Give a busy stage room for several card stacks, keep quieter stages narrow, and collapse a stage when you only need to know it’s there.">See stages in action <span>↗</span></button></div>
+          <div class="feature-card"><h4>More than one look</h4><p>Choose a built-in theme, board wallpaper, and colors for cards, selections, and buckets.</p><button class="media-link" type="button" data-media="assets/board-appearance-presets.jpg" data-media-title="Make the board recognizable" data-media-copy="Load a preset look, choose a wallpaper, change stage opacity, and tune colors for the board, cards, buckets, and selections.">See an appearance <span>↗</span></button></div>
+          <div class="feature-card"><h4>Cards with enough context</h4><p>Add a title, summary, and colored tags without making every card into a form.</p></div>
+          <div class="feature-card"><h4>Markdown when you need it</h4><p>Open a card’s document beside the board. Preview it, edit it in Dodalu, or use your usual editor.</p><button class="media-link" type="button" data-media="assets/docs-pane.webp" data-media-title="The card document stays beside the board" data-media-copy="Select a card and its Markdown opens in a docked pane. Preview by default, switch to editing when needed, or open the file in your usual editor.">See the document pane <span>↗</span></button></div>
+          <div class="feature-card"><h4>Buckets inside stages</h4><p>Group related cards one level deep without adding another stage or inventing a tag system.</p></div>
         </article>
-        <article class="use-item reveal">
-          <h3>Plan the messy middle</h3>
-          <p>
-            Trips, moves, renovations, launch weeks — stages you invent for
-            the real sequence, not a generic “todo / doing / done.”
-          </p>
+        <article class="feature-stage blue">
+          <header><h3>Work the board</h3></header>
+          <div class="feature-card"><h4>Search the useful parts</h4><p>Search titles and summaries, and include card documents when you need to look deeper.</p><button class="media-link" type="button" data-media="assets/docs-pane.webp" data-media-title="Search cards—and their documents" data-media-copy="The board header searches card titles and summaries. Turn on Include specs when the phrase you remember is buried in a card’s Markdown document.">See search in context <span>↗</span></button></div>
+          <div class="feature-card"><h4>Filter with tags</h4><p>Use colored project tags on cards, then filter the whole board or a single stage.</p><button class="media-link" type="button" data-media="assets/hero-board.webp" data-media-title="Tags without a separate database" data-media-copy="Colored tags are visible directly on cards. Use them to filter the whole board or narrow one particular stage.">See tags on cards <span>↗</span></button></div>
+          <div class="feature-card"><h4>Archive without losing it</h4><p>Move finished cards out of the way and restore them later. Permanent deletion stays optional.</p></div>
+          <div class="feature-card"><h4>Undo and redo</h4><p>Back out board changes when a tidy-up goes sideways.</p></div>
+          <div class="feature-card"><h4>Move cards between boards</h4><p>Cut, copy, paste, copy-to, or drag cards across open Dodalu windows.</p></div>
+          <div class="feature-card"><h4>Track effort, if that helps</h4><p>Add estimates and work entries when a card needs more than a done-or-not-done answer.</p></div>
         </article>
-        <article class="use-item reveal reveal-delay">
-          <h3>Run a personal pipeline</h3>
-          <p>
-            Writing, courses, content, job applications — each piece is a
-            card you can move as it progresses.
-          </p>
+        <article class="feature-stage green">
+          <header><h3>Keep control</h3></header>
+          <div class="feature-card"><h4>No account. No required cloud.</h4><p>Dodalu’s board data stays on your computer unless you choose to sync the files yourself.</p></div>
+          <div class="feature-card"><h4>JSON boards, Markdown notes</h4><p>Keep ordinary, inspectable files with the project instead of trapping the useful parts in a service.</p></div>
+          <div class="feature-card"><h4>Agents can use it too</h4><p>Optional MCP lets Cursor, Claude Desktop, Codex, or Copilot create, update, and move cards.</p></div>
+          <div class="feature-card"><h4>Updates in the app</h4><p>Windows and Linux builds can check the Dodalu release feed and update themselves.</p></div>
+          <div class="feature-card with-cover"><img class="card-cover" src="assets/mascot.webp" alt="Dodalu’s reminder robot"><h4>Free means every feature</h4><p>Dodalu is nagware, not freemium. There is no premium tier or usage limit. Support it if it earns its keep and the reminder robot will leave you alone.</p></div>
         </article>
       </div>
     </section>
 
-    <section class="band" id="how" aria-labelledby="how-title">
-      <div class="band-inner reveal">
-        <h2 id="how-title">Start a board your way.</h2>
-        <p class="band-support">
-          The welcome screen keeps your boards in one place. New Board walks
-          you through location, name, structure, look, and settings — a quick
-          board on this computer, a new or existing project folder, or bring
-          an existing board along from a JSON export.
-        </p>
+    <section class="download" id="download">
+      <div class="section-heading download-heading">
+        <h2>Get Dodalu.</h2>
+        <p>Developed on Windows and Ubuntu. Those are where I use it. macOS? No idea.
+          <a href="https://github.com/RossWright/Dodalu-Releases/issues">Someone with a Mac tell me if it works!</a></p>
       </div>
-      <figure class="shot reveal reveal-delay">
-        <picture>
-          <source srcset="assets/welcome.webp" type="image/webp" />
-          <img
-            src="assets/welcome.png"
-            width="1024"
-            height="692"
-            alt="Dodalu welcome screen with New Board wizard choosing where the board should live"
-          />
-        </picture>
-        <figcaption>Your boards catalog, with a guided New Board wizard.</figcaption>
-      </figure>
-    </section>
-
-    <section class="steps" aria-label="What you can do on a board">
-      <article class="step reveal">
-        <span class="step-index">01</span>
-        <h3>Shape the board</h3>
-        <p>
-          Stages, colors, themes, wallpaper, tags, and buckets — tuned to
-          this work, not a hosted workspace template.
-        </p>
-      </article>
-      <article class="step reveal reveal-delay">
-        <span class="step-index">02</span>
-        <h3>Write real notes</h3>
-        <p>
-          Every card can open a Markdown document beside the board —
-          checklists, research, specs, packing lists.
-        </p>
-      </article>
-      <article class="step reveal reveal-delay-2">
-        <span class="step-index">03</span>
-        <h3>Stay in control</h3>
-        <p>
-          Search, tag filters, archive, undo, copy and paste across boards.
-          Your files stay on this machine.
-        </p>
-      </article>
-    </section>
-
-    <section class="shot-section" id="notes" aria-labelledby="notes-title">
-      <div class="shot-section-copy reveal">
-        <h2 id="notes-title">Cards that hold more than a title.</h2>
-        <p>
-          Select a card and its Markdown opens in the same window — preview
-          by default, edit when you need it, or jump to your usual editor.
-        </p>
-      </div>
-      <figure class="shot reveal reveal-delay">
-        <picture>
-          <source srcset="assets/docs-pane.webp" type="image/webp" />
-          <img
-            src="assets/docs-pane.png"
-            width="1024"
-            height="619"
-            alt="Dodalu board with a card’s Markdown document open in the side pane"
-          />
-        </picture>
-        <figcaption>Board on the left, the card’s note on the right.</figcaption>
-      </figure>
-    </section>
-
-    <section class="split" id="agents" aria-labelledby="agents-title">
-      <div class="split-copy reveal">
-        <h2 id="agents-title">Building with agents? Give them a board too.</h2>
-        <p>
-          If you already work in Cursor, Claude Desktop, Codex, or Copilot,
-          optional MCP lets those tools create and move cards on your board —
-          while Dodalu stays a calm place to see the whole picture. Conversations
-          stay in your editor; the board stays yours.
-        </p>
-      </div>
-      <div class="split-visual reveal reveal-delay">
-        <div class="quote-panel">
-          <picture>
-            <source srcset="assets/mascot.webp" type="image/webp" />
-            <img
-              class="mascot"
-              src="assets/mascot.png"
-              width="280"
-              height="187"
-              alt=""
-            />
-          </picture>
-          <p>
-            Register agent clients from the app when you want them. Skip it
-            entirely if you just want a quiet personal board.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="download" id="download" aria-labelledby="download-title">
-      <div class="download-inner reveal">
-        <h2 id="download-title">Get Dodalu</h2>
-        <p>
-          Free forever — every feature, no account. If Dodalu earns its keep on
-          your machine,
-          <a href="https://pay.dodalu.com/">support the project</a> and we’ll
-          send a code that tells the little robot to stop calling you a
-          freeloader.
-        </p>
-        <div class="platform-picker" role="group" aria-label="Choose your platform">
-          <button type="button" class="btn large platform-btn" data-platform="win" aria-controls="panel-win" aria-expanded="false">
-            Windows
-          </button>
-          <button type="button" class="btn large platform-btn" data-platform="linux" aria-controls="panel-linux" aria-expanded="false">
-            Linux
-          </button>
-          <button type="button" class="btn large platform-btn" data-platform="mac" aria-controls="panel-mac" aria-expanded="false">
-            macOS
-          </button>
-        </div>
-
-        <div class="platform-panel" id="panel-win" hidden>
-          <article class="pkg">
-            <h4>Beta</h4>
-            <p>Current public builds — newer features, still settling.</p>
-            <a class="btn primary" id="download-win-beta" href="feed/">Download Windows Setup (Beta)</a>
-          </article>
-          <article class="pkg">
-            <h4>Stable</h4>
-            <p class="pkg-note">
-              Stable isn’t published yet. Use Beta for now.
-            </p>
-          </article>
-          <p class="platform-foot">
-            Once installed, Dodalu can check this site and update itself.
-          </p>
-        </div>
-
-        <div class="platform-panel" id="panel-linux" hidden>
-          <article class="pkg">
-            <h4>Beta</h4>
-            <p>Current public builds — pick how you want to install:</p>
-            <div class="pkg-actions">
-              <a class="btn primary" id="download-linux-appimage-beta" href="feed/">Portable download (Beta)</a>
-              <a class="btn primary" id="download-linux-deb-beta" href="feed/">Debian / Ubuntu (Beta)</a>
+      <div class="download-board">
+        <article class="download-stage windows">
+          <header><h3>Windows</h3></header>
+          <div class="download-card">
+            <div class="download-meta">
+              <span class="channel stable">Stable</span>
+              <span class="version-bubble unavailable">Not published</span>
             </div>
-          </article>
-          <article class="pkg">
-            <h4>Stable</h4>
-            <p class="pkg-note">
-              Stable isn’t published yet. Use Beta for now.
-            </p>
-          </article>
-          <p class="platform-foot">
-            Once installed, Dodalu can check this site and update itself.
-          </p>
-        </div>
-
-        <div class="platform-panel" id="panel-mac" hidden>
-          <article class="pkg">
-            <h4>Beta</h4>
+            <h4>Not published yet</h4>
+            <p>Use the current beta for now.</p>
+          </div>
+          <div class="download-card featured">
+            <div class="download-meta">
+              <span class="channel beta">Beta</span>
+              <span class="version-bubble" data-version-channel="win-beta">2026.0.0-beta.15</span>
+            </div>
+            <h4>Windows Setup</h4>
+            <p>The exe installs for current user and has auto-update. An msi is coming soon.</p>
+            <div class="package-links">
+              <a class="download-link" id="download-win-exe-beta" href="feed/Dodalu.App-win-beta-Setup.exe">Download .exe <span>↓</span></a>
+              <a class="download-disabled-link" id="download-win-msi-beta">Download .msi <span>↓</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="download-stage linux">
+          <header><h3>Linux</h3></header>
+          <div class="download-card">
+            <div class="download-meta"><span class="channel stable">Stable</span><span class="version-bubble unavailable">Not published</span></div>
+            <h4>Not published yet</h4>
+            <p>Use the current beta for now.</p>
+          </div>
+          <div class="download-card featured">
+            <div class="download-meta">
+              <span class="channel beta">Beta</span>
+              <span class="version-bubble" data-version-channel="linux-beta">2026.0.0-beta.15</span>
+            </div>
+            <h4>Pick your package</h4>
+            <p>Use the portable AppImage or install the Debian / Ubuntu package. More options coming soon.</p>
+            <div class="package-links">
+              <a class="download-link" id="download-linux-appimage-beta" href="feed/Dodalu-linux-beta.AppImage">AppImage <span>↓</span></a>
+              <a class="download-link" id="download-linux-deb-beta" href="feed/dodalu_2026.0.0-beta.15_amd64.deb">.deb <span>↓</span></a>
+            </div>
+          </div>
+        </article>
+        <article class="download-stage mac">
+          <header><h3>macOS</h3></header>
+          <div class="download-card">
+            <div class="download-meta">
+              <span class="channel stable">Stable</span>
+              <span class="version-bubble unavailable">Not published</span>
+            </div>
+            <h4>Not published yet</h4>
+            <p>Use the current beta for now.</p>
+          </div>
+          <div class="download-card featured">
+            <div class="download-meta">
+              <span class="channel beta">Beta</span>
+              <span class="version-bubble" data-version-channel="osx-beta">2026.0.0-beta.15</span>
+            </div>
+            <h4>Unsigned Apple Silicon Zip</h4>
+            <p>The current unsigned beta for M-series Macs. Its more like an alpha. A theoretical alpha if you will.</p>
+            <a class="download-link" id="download-mac-beta" href="feed/Dodalu-2026.0.0-beta.15-osx-arm64.zip">Download .zip <span>↓</span></a>
             <p>
-              Unsigned Apple Silicon build for now. Unzip, then right-click
-              Dodalu.app → Open (don’t double-click first). If macOS says it is
-              damaged, that is Gatekeeper — clear the quarantine flag and try
-              Open again.
+              In theory, unzip it, right-click Dodalu.app and choose Open. If macOS says its damaged, clear quarantine flag and try again.
             </p>
-            <a class="btn primary" id="download-mac-beta" href="feed/">Download macOS (Beta)</a>
-            <p class="pkg-aside">
-              Details:
-              <a href="feed/README-macos.txt">how to open on macOS</a>
-            </p>
-          </article>
-          <article class="pkg">
-            <h4>Stable</h4>
-            <p class="pkg-note">
-              Stable isn’t on macOS yet. Apple’s fees for shipping free software
-              there are real — if enough people
-              <a href="https://pay.dodalu.com/">support the project</a>, we can
-              cover notarization and a proper Stable channel.
-            </p>
-          </article>
-          <p class="platform-foot">
-            This macOS zip does not update itself yet — grab a newer zip from
-            here when you want a newer build.
-          </p>
-        </div>
+          </div>
+        </article>
       </div>
-    </section>
-
-    <section class="features" id="features" aria-labelledby="features-title">
-      <div class="features-inner reveal">
-        <h2 id="features-title">Features</h2>
-        <p class="features-lead">
-          Dodalu is a local-first desktop kanban app for a single user. Here is
-          what it does today:
-        </p>
-        <ul class="feature-list">
-          <li>Personal kanban boards that run on Windows, Linux, and macOS (desktop app; Mac zip is unsigned)</li>
-          <li>No account and no required cloud sync — board data stays on your computer</li>
-          <li>Boards catalog on the welcome screen with recent projects and sorting</li>
-          <li>New Board wizard: location, name, structure, look, and settings</li>
-          <li>Quick boards stored on this computer, or boards inside a new or existing project folder</li>
-          <li>Import a board from a Trello JSON export (lists, cards, labels, checklists)</li>
-          <li>Custom stages (columns) with colors, widths, collapse, and reorder in edit mode</li>
-          <li>Built-in themes, board wallpaper, and card/selection/bucket colors</li>
-          <li>Cards with titles, summaries, colored tags, and optional Markdown backing documents</li>
-          <li>In-app Markdown preview and source editor, with open-in-external-editor</li>
-          <li>Buckets to group related cards one level deep inside a stage</li>
-          <li>Search across titles and summaries, with optional search in Spec documents</li>
-          <li>Tag filters on the board; manage a project tag catalog</li>
-          <li>Archive and restore cards (optional permanent delete)</li>
-          <li>Undo and redo for board content changes</li>
-          <li>Cut, copy, paste, and copy-to between boards; drag cards across Dodalu windows</li>
-          <li>Optional effort tracking with estimates and work entries</li>
-          <li>Optional MCP server so external agents (Cursor, Claude Desktop, Codex, Copilot) can create, update, and move cards</li>
-          <li>Board state as local JSON plus Markdown files you can keep with a project</li>
-          <li>In-app updates from the Dodalu release feed</li>
-          <li>Free forever with all features enabled; optional financial support via Lemon Squeezy returns a supporter code</li>
-          <li>A reminder robot that nudges you when you’re using Dodalu without having supported the developer — enter a supporter code to quiet it</li>
-        </ul>
-      </div>
+      <p class="download-note">
+        Bugs, Mac reports, feature ideas:
+        <a href="https://github.com/RossWright/Dodalu-Releases/issues">open a GitHub issue</a>.
+        I actually read them.
+      </p>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="assets/logo.png" width="28" height="28" alt="" />
-        <span>Dodalu</span>
-      </div>
-      <p>
-        © <span id="year"></span> <a href="https://pross.co/">Pross Co</a> ·
-        Desktop software for local project boards ·
-        <a href="privacy.html">Privacy</a>
-      </p>
+  <dialog class="media-dialog" data-media-dialog>
+    <button class="dialog-close" type="button" data-media-close aria-label="Close">×</button>
+    <div class="dialog-layout">
+      <div class="dialog-media"><img data-media-image alt=""><video data-media-video controls playsinline hidden></video></div>
+      <div class="dialog-copy"><h2 data-media-heading></h2><p data-media-text></p></div>
     </div>
-  </footer>
+  </dialog>
 
-  <script src="site.js?v=5"></script>
+  <footer class="site-footer"><span>© <span data-year></span> <a href="https://pross.co/">Pross Co</a></span><a href="privacy.html">Privacy</a><a href="license.html">License</a><a href="https://github.com/RossWright/Dodalu-Releases/issues">Issues</a><a href="https://pay.dodalu.com/">Support Dodalu</a></footer>
+  <script src="site.js"></script>
 </body>
 </html>
