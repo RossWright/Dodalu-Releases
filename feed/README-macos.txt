@@ -1,4 +1,4 @@
-Dodalu for macOS (2026.0.0-beta.15, osx-arm64)
+Dodalu for macOS (2026.0.0-beta.16, osx-arm64)
 =========================================
 
 This build is unsigned (not notarized by Apple).
