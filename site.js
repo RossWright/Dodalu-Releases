@@ -35,7 +35,6 @@
     { id: "download-win-exe-beta", pattern: /href="([^"]*Setup\.exe)"/i },
     { id: "download-linux-appimage-beta", pattern: /href="([^"]*\.AppImage)"/i },
     { id: "download-linux-deb-beta", pattern: /href="([^"]*\.deb)"/i },
-    { id: "download-mac-beta", pattern: /href="([^"]*osx-(?:arm64|x64)[^"]*\.zip)"/i },
   ];
   const setVersion = (channel, version) => {
     const bubble = document.querySelector(`[data-version-channel="${channel}"]`);
@@ -51,7 +50,6 @@
           const match = html.match(pattern);
           if (link && match?.[1]) link.href = new URL(match[1], feedBase).href;
         });
-        setVersion("osx-beta", html.match(/Dodalu-([^"]+?)-osx-(?:arm64|x64)\.zip/i)?.[1]);
       })
       .catch(() => {
         // Static fallbacks point at the current published packages.
@@ -162,6 +160,24 @@
     dialog.addEventListener("cancel", (event) => {
       event.preventDefault();
       close();
+    });
+  }
+
+  const windowsHelpDialog = document.querySelector("[data-windows-help-dialog]");
+  const windowsHelpOpener = document.querySelector("[data-windows-help-open]");
+  if (windowsHelpDialog && windowsHelpOpener) {
+    const closeWindowsHelp = () => {
+      windowsHelpDialog.close();
+      windowsHelpOpener.focus();
+    };
+    windowsHelpOpener.addEventListener("click", () => windowsHelpDialog.showModal());
+    windowsHelpDialog.querySelector("[data-windows-help-close]")?.addEventListener("click", closeWindowsHelp);
+    windowsHelpDialog.addEventListener("click", (event) => {
+      if (event.target === windowsHelpDialog) closeWindowsHelp();
+    });
+    windowsHelpDialog.addEventListener("cancel", (event) => {
+      event.preventDefault();
+      closeWindowsHelp();
     });
   }
 })();

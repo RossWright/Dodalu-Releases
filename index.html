@@ -80,7 +80,7 @@
       <div class="feature-board">
         <article class="feature-stage coral">
           <header><h3>Start a board</h3></header>
-          <div class="feature-card"><h4>Windows, Linux, and macOS</h4><p>A real desktop app, with current public beta builds for all three.</p></div>
+          <div class="feature-card"><h4>Windows and Linux today</h4><p>Current public beta builds are available for Windows and Linux. A public macOS build still needs hands-on testers.</p></div>
           <div class="feature-card"><h4>Your boards, remembered</h4><p>The welcome screen keeps a sortable catalog of recent boards so you can get back to work quickly.</p><button class="media-link" type="button" data-media="assets/welcome.webp" data-media-title="Your boards, remembered" data-media-copy="The welcome screen keeps recent boards within reach. Sort them, reorder them, or start another without digging through folders.">See the boards screen <span>↗</span></button></div>
           <div class="feature-card"><h4>A guided start</h4><p>Choose a location, name, structure, look, and settings in the New Board wizard.</p><button class="media-link" type="button" data-media="assets/welcome.webp" data-media-title="Start a board your way" data-media-copy="The New Board wizard walks through where the board lives, what it is called, its starting structure, appearance, and optional settings.">See the wizard <span>↗</span></button></div>
           <div class="feature-card"><h4>Quick or project-based</h4><p>Keep a quick board on this computer or put one inside a new or existing project folder.</p></div>
@@ -117,8 +117,8 @@
     <section class="download" id="download">
       <div class="section-heading download-heading">
         <h2>Get Dodalu.</h2>
-        <p>Developed on Windows and Ubuntu. Those are where I use it. macOS? No idea.
-          <a href="https://github.com/RossWright/Dodalu-Releases/issues">Someone with a Mac tell me if it works!</a></p>
+        <p>Developed and tested on Windows and Ubuntu. The macOS build is not public yet.
+          <a href="mailto:ross@dodalu.com?subject=Dodalu%20macOS%20testing">Interested in helping test it?</a></p>
       </div>
       <div class="download-board">
         <article class="download-stage windows">
@@ -142,6 +142,11 @@
               <a class="download-link" id="download-win-exe-beta" href="feed/Dodalu.App-win-beta-Setup.exe">Download .exe <span>↓</span></a>
               <a class="download-disabled-link" id="download-win-msi-beta">Download .msi <span>↓</span></a>
             </div>
+            <button class="windows-warning-callout" type="button" data-windows-help-open>
+              <span class="warning-icon" aria-hidden="true">!</span>
+              <span><strong>Edge and Windows may warn you</strong><small>Dodalu is signed, but its download reputation is still new. See both short walkthroughs.</small></span>
+              <span class="callout-arrow" aria-hidden="true">↗</span>
+            </button>
           </div>
         </article>
         <article class="download-stage linux">
@@ -172,24 +177,21 @@
               <span class="version-bubble unavailable">Not published</span>
             </div>
             <h4>Not published yet</h4>
-            <p>Use the current beta for now.</p>
+            <p>There is no public macOS build yet.</p>
           </div>
-          <div class="download-card featured">
+          <div class="download-card">
             <div class="download-meta">
               <span class="channel beta">Beta</span>
-              <span class="version-bubble" data-version-channel="osx-beta">2026.0.0-beta.15</span>
+              <span class="version-bubble unavailable">Not published</span>
             </div>
-            <h4>Unsigned Apple Silicon Zip</h4>
-            <p>The current unsigned beta for M-series Macs. Its more like an alpha. A theoretical alpha if you will.</p>
-            <a class="download-link" id="download-mac-beta" href="feed/Dodalu-2026.0.0-beta.15-osx-arm64.zip">Download .zip <span>↓</span></a>
-            <p>
-              In theory, unzip it, right-click Dodalu.app and choose Open. If macOS says its damaged, clear quarantine flag and try again.
-            </p>
+            <h4>Not published yet</h4>
+            <p>I need a few Apple Silicon users willing to test installation, basic board use, and updates before calling this public.</p>
+            <a class="download-link" href="mailto:ross@dodalu.com?subject=Dodalu%20macOS%20testing">Help test macOS <span>↗</span></a>
           </div>
         </article>
       </div>
       <p class="download-note">
-        Bugs, Mac reports, feature ideas:
+        Bugs, macOS testing, feature ideas:
         <a href="https://github.com/RossWright/Dodalu-Releases/issues">open a GitHub issue</a>.
         I actually read them.
       </p>
@@ -201,6 +203,76 @@
     <div class="dialog-layout">
       <div class="dialog-media"><img data-media-image alt=""><video data-media-video controls playsinline hidden></video></div>
       <div class="dialog-copy"><h2 data-media-heading></h2><p data-media-text></p></div>
+    </div>
+  </dialog>
+
+  <dialog class="windows-help-dialog" data-windows-help-dialog>
+    <button class="dialog-close" type="button" data-windows-help-close aria-label="Close">×</button>
+    <div class="windows-help-header">
+      <p class="dialog-kicker">While Dodalu builds its Microsoft reputation</p>
+      <h2>Two warnings. Two short paths.</h2>
+      <div class="reputation-explainer">
+        <h3>Why am I seeing this?</h3>
+        <p>Windows checks two things: who signed an app, and whether that signed app has built enough download history. Pross Co is registered as Dodalu’s publisher and every Windows installer is digitally signed, but Microsoft reputation only grows with time and downloads. Until it does, Edge and SmartScreen may call Dodalu unfamiliar. That means “new and uncommon,” not “virus found.”</p>
+      </div>
+      <p class="publisher-check">Only continue if you downloaded from <strong>dodalu.com</strong> and Windows shows the publisher as <strong>Pross Co</strong>.</p>
+    </div>
+    <div class="warning-flows">
+      <section class="warning-flow">
+        <header><div><span>Microsoft Edge</span><h3>Keep the download</h3></div><b>3 clicks</b></header>
+        <ol class="windows-help-steps edge-steps">
+          <li>
+            <figure>
+              <div class="annotated-shot shot-wide" style="--shot-ratio: 578 / 272">
+                <img src="assets/windows-edge-download-warning.png" alt="Edge Downloads panel saying the Dodalu installer is not commonly downloaded">
+                <span class="screenshot-target target-round" style="--target-left: 90%; --target-top: 61%; --target-width: 9%; --target-height: 18%" aria-hidden="true"></span>
+              </div>
+            </figure>
+            <div><span>1</span><p>Open the <strong>•••</strong> menu beside the download.</p></div>
+          </li>
+          <li>
+            <figure>
+              <div class="annotated-shot shot-wide" style="--shot-ratio: 832 / 521">
+                <img src="assets/windows-edge-keep-menu.png" alt="Edge download menu with Keep selected">
+                <span class="screenshot-target" style="--target-left: 79%; --target-top: 50%; --target-width: 29%; --target-height: 13%" aria-hidden="true"></span>
+              </div>
+            </figure>
+            <div><span>2</span><p>Choose <strong>Keep</strong>.</p></div>
+          </li>
+          <li>
+            <figure>
+              <div class="annotated-shot shot-tall" style="--shot-ratio: 590 / 815">
+                <img src="assets/windows-edge-trust-dialog.png" alt="Edge trust dialog with Keep anyway in the Delete menu">
+                <span class="screenshot-target" style="--target-left: 83%; --target-top: 95%; --target-width: 31%; --target-height: 8%" aria-hidden="true"></span>
+              </div>
+            </figure>
+            <div><span>3</span><p>Choose <strong>Keep anyway</strong>.</p></div>
+          </li>
+        </ol>
+      </section>
+      <section class="warning-flow">
+        <header><div><span>Windows SmartScreen</span><h3>Run the installer</h3></div><b>2 clicks</b></header>
+        <ol class="windows-help-steps smartscreen-steps">
+          <li>
+            <figure>
+              <div class="annotated-shot shot-tall" style="--shot-ratio: 847 / 797">
+                <img src="assets/windows-smartscreen-more-info.png" alt="Windows protected your PC dialog with a More info link">
+                <span class="screenshot-target" style="--target-left: 10.5%; --target-top: 27%; --target-width: 20%; --target-height: 7%" aria-hidden="true"></span>
+              </div>
+            </figure>
+            <div><span>1</span><p>Click <strong>More info</strong>.</p></div>
+          </li>
+          <li>
+            <figure>
+              <div class="annotated-shot shot-tall" style="--shot-ratio: 847 / 797">
+                <img src="assets/windows-smartscreen-run-anyway.png" alt="Windows protected your PC dialog showing Pross Co and a Run anyway button">
+                <span class="screenshot-target" style="--target-left: 64%; --target-top: 91%; --target-width: 20%; --target-height: 8%" aria-hidden="true"></span>
+              </div>
+            </figure>
+            <div><span>2</span><p>Confirm the publisher is <strong>Pross Co</strong>, then click <strong>Run anyway</strong>.</p></div>
+          </li>
+        </ol>
+      </section>
     </div>
   </dialog>
 
