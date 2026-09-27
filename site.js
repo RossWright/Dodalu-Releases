@@ -33,6 +33,7 @@
   const feedBase = new URL("feed/", window.location.href);
   const downloadTargets = [
     { id: "download-win-exe-beta", pattern: /href="([^"]*Setup\.exe)"/i },
+    { id: "download-win-msi-beta", pattern: /href="([^"]*\.msi)"/i },
     { id: "download-linux-appimage-beta", pattern: /href="([^"]*\.AppImage)"/i },
     { id: "download-linux-deb-beta", pattern: /href="([^"]*\.deb)"/i },
   ];
